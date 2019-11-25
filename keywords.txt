@@ -1,0 +1,17 @@
+printDivide			KEYWORD2
+printDivideLn		KEYWORD2
+printMinorDivide	KEYWORD2
+printMinorDivideLn	KEYWORD2
+printMajorDivide    KEYWORD2
+printMajorDivideLn	KEYWORD2
+printTeensyDivide	KEYWORD2
+printTeensyDivideLn KEYWORD2
+
+printTab    		KEYWORD2
+frText      		KEYWORD2
+
+dprint			KEYWORD2
+dprintln		KEYWORD2
+dprintTab 		KEYWORD2
+
+printDouble 	KEYWORD2
