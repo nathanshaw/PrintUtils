@@ -18,6 +18,7 @@ void dprintTab(int conditional) {
   Serial.print("\t");
 }
 
+///////////////////////////////////////////////////////////
 void dprint(int conditional, String data) {
   if (conditional > 0) {
     Serial.print(data);
@@ -31,6 +32,12 @@ void dprint(int conditional, int data) {
 }
 
 void dprint(int conditional, unsigned long data) {
+  if (conditional > 0) {
+    Serial.print(data);
+  }
+}
+
+void dprint(int conditional, uint32_t data) {
   if (conditional > 0) {
     Serial.print(data);
   }
@@ -53,6 +60,7 @@ void dprint(int conditional, double data) {
     Serial.print(data);
   }
 }
+////////////////////////// PrintLn ////////////////////////////////////////
 
 void dprintln(int conditional) {
   if (conditional > 0) {
@@ -90,11 +98,46 @@ void dprintln(int conditional, long data) {
   }
 }
 
+void dprintln(int conditional, uint32_t data) {
+  if (conditional > 0) {
+    Serial.println(data);
+  }
+}
+
 void dprintln(int conditional, unsigned long data) {
   if (conditional > 0) {
     Serial.println(data);
   }
 }
+
+////////////////////////// printing with precision ////////////////////////////////////////
+
+void dprint(int conditional, double data, int precision) {
+  if (conditional > 0) {
+    Serial.print(data, precision);
+  }
+}
+
+void dprint(int conditional, float data, int precision) {
+  if (conditional > 0) {
+    Serial.print(data, precision);
+  }
+}
+
+void dprintln(int conditional, double data, int precision) {
+  if (conditional > 0) {
+    Serial.println(data, precision);
+  }
+}
+
+void dprintln(int conditional, float data, int precision) {
+  if (conditional > 0) {
+    Serial.println(data, precision);
+  }
+}
+
+
+////////////////////////////////////////////////////////////////////
 
 void printTeensyDivideLn(String m) {
   Serial.print("- - - - - - - - - ");Serial.print(m);Serial.println(" - - - - - - - - - -\n");
@@ -115,6 +158,19 @@ void printTeensyDivideLn() {
 void printMinorDivideLn() {
   Serial.println("-------------------------------------\n");
 }
+
+void dprintMinorDivideLn(uint8_t do_print) {
+  if (do_print){
+    Serial.println("-------------------------------------\n");
+  }
+}
+
+void dprintMinorDivide(uint8_t do_print) {
+  if (do_print){
+    Serial.println("-------------------------------------");
+  }
+}
+
 
 void printDivideLn() {
   Serial.println("|||||||||||||||||||||||||||||||||||||\n");
@@ -138,9 +194,18 @@ void printMajorDivide(String text) {
   } else {
     Serial.println();
   };
-  Serial.println("|||||||||||||||||||||||||||||||||||||\n");
+  Serial.println("|||||||||||||||||||||||||||||||||||||");
 }
 
+void printMajorDivideLn(String text) {
+  Serial.println("|||||||||||||||||||||||||||||||||||||");
+  if (text != "") {
+    Serial.println(text);
+  } else {
+    Serial.println();
+  };
+  Serial.println("|||||||||||||||||||||||||||||||||||||\n");
+}
 
 void printDouble( double val, unsigned int precision) {
   // prints val with number of decimal places determine by precision

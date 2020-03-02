@@ -13,5 +13,7 @@ frText      		KEYWORD2
 dprint			KEYWORD2
 dprintln		KEYWORD2
 dprintTab 		KEYWORD2
+dprintMinorDivide       KEYWORD2
+dprintMinorDivideLn     KEYWORD2
 
 printDouble 	KEYWORD2
