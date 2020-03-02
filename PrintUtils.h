@@ -37,7 +37,7 @@ void dprint(int conditional, unsigned long data) {
   }
 }
 
-void dprint(int conditional, uint32_t data) {
+void dprint(int conditional, uint64_t data) {
   if (conditional > 0) {
     Serial.print(data);
   }
@@ -98,7 +98,7 @@ void dprintln(int conditional, long data) {
   }
 }
 
-void dprintln(int conditional, uint32_t data) {
+void dprintln(int conditional, uint64_t data) {
   if (conditional > 0) {
     Serial.println(data);
   }
