@@ -31,25 +31,61 @@ void dprint(int conditional, int data) {
   }
 }
 
-void dprint(int conditional, unsigned long data) {
+void dprint(int conditional, unsigned int data) {
   if (conditional > 0) {
     Serial.print(data);
+  }
+}
+
+void dprint(int conditional, int8_t data) {
+  if (conditional > 0) {
+    Serial.print(data);
+  }
+}
+
+void dprint(int conditional, uint8_t data) {
+  if (conditional > 0) {
+    Serial.print(data);
+  }
+}
+
+void dprint(int conditional, int16_t data) {
+  if (conditional > 0) {
+    Serial.print(data);
+  }
+}
+
+void dprint(int conditional, uint16_t data) {
+  if (conditional > 0) {
+    Serial.print(data);
+  }
+}
+
+void dprint(int conditional, int32_t data) {
+  if (conditional > 0) {
+    Serial.print(data);
+  }
+}
+
+void dprint(int conditional, uint32_t  data) {
+  if (conditional > 0) {
+    Serial.print(data);
+  }
+}
+
+void dprint(int conditional, int64_t data) {
+  if (conditional > 0) {
+    Serial.print((long int)data);
   }
 }
 
 void dprint(int conditional, uint64_t data) {
   if (conditional > 0) {
-    Serial.print(data);
+    Serial.print((long unsigned int) data);
   }
 }
 
-void dprint(int conditional, long data) {
-  if (conditional > 0) {
-    Serial.print(data);
-  }
-}
-
-void dprint(int conditional, unsigned int data) {
+void dprint(int conditional, float data) {
   if (conditional > 0) {
     Serial.print(data);
   }
@@ -74,15 +110,63 @@ void dprintln(int conditional, String data) {
   }
 }
 
-void dprintln(int conditional, int data) {
+void dprintln(int conditional, int  data) {
   if (conditional > 0) {
     Serial.println(data);
   }
 }
 
-void dprintln(int conditional, unsigned int data) {
+void dprintln(int conditional, unsigned int  data) {
   if (conditional > 0) {
     Serial.println(data);
+  }
+}
+
+void dprintln(int conditional, int8_t  data) {
+  if (conditional > 0) {
+    Serial.println(data);
+  }
+}
+
+void dprintln(int conditional, uint8_t  data) {
+  if (conditional > 0) {
+    Serial.println(data);
+  }
+}
+
+void dprintln(int conditional, uint16_t  data) {
+  if (conditional > 0) {
+    Serial.println(data);
+  }
+}
+
+void dprintln(int conditional, int16_t  data) {
+  if (conditional > 0) {
+    Serial.println(data);
+  }
+}
+
+void dprintln(int conditional, int32_t data) {
+  if (conditional > 0) {
+    Serial.println(data);
+  }
+}
+
+void dprintln(int conditional, uint32_t data) {
+  if (conditional > 0) {
+    Serial.println(data);
+  }
+}
+
+void dprintln(int conditional, int64_t data) {
+  if (conditional > 0) {
+    Serial.println((long int)data);
+  }
+}
+
+void dprintln(int conditional, uint64_t data) {
+  if (conditional > 0) {
+    Serial.println((long unsigned int) data);
   }
 }
 
@@ -92,24 +176,11 @@ void dprintln(int conditional, double data) {
   }
 }
 
-void dprintln(int conditional, long data) {
+void dprintln(int conditional, float data) {
   if (conditional > 0) {
     Serial.println(data);
   }
 }
-
-void dprintln(int conditional, uint64_t data) {
-  if (conditional > 0) {
-    Serial.println(data);
-  }
-}
-
-void dprintln(int conditional, unsigned long data) {
-  if (conditional > 0) {
-    Serial.println(data);
-  }
-}
-
 ////////////////////////// printing with precision ////////////////////////////////////////
 
 void dprint(int conditional, double data, int precision) {
@@ -135,7 +206,6 @@ void dprintln(int conditional, float data, int precision) {
     Serial.println(data, precision);
   }
 }
-
 
 ////////////////////////////////////////////////////////////////////
 
@@ -169,6 +239,30 @@ void dprintMinorDivide(uint8_t do_print) {
   if (do_print){
     Serial.println("-------------------------------------");
   }
+}
+
+void dprintMajorDivide(uint8_t do_print, String text) {
+  if (do_print){
+  Serial.println("|||||||||||||||||||||||||||||||||||||");
+  if (text != "") {
+    Serial.println(text);
+  } else {
+    Serial.println();
+  };
+  Serial.println("|||||||||||||||||||||||||||||||||||||");
+  }
+}
+
+void dprintMajorDivideLn(uint8_t do_print, String text) {
+    if (do_print){
+  Serial.println("|||||||||||||||||||||||||||||||||||||");
+  if (text != "") {
+    Serial.println(text);
+  } else {
+    Serial.println();
+  };
+  Serial.println("|||||||||||||||||||||||||||||||||||||\n");
+    }
 }
 
 

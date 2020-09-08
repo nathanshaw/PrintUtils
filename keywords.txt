@@ -10,10 +10,14 @@ printTeensyDivideLn KEYWORD2
 printTab    		KEYWORD2
 frText      		KEYWORD2
 
-dprint			KEYWORD2
-dprintln		KEYWORD2
-dprintTab 		KEYWORD2
+dprint			        KEYWORD2
+dprintln		        KEYWORD2
+dprintTab 		        KEYWORD2
+dprintTeensyDivide      KEYWORD2
+dprintTeensyDivideLn    KEYWORD2
 dprintMinorDivide       KEYWORD2
 dprintMinorDivideLn     KEYWORD2
+dprintMajorDivide       KEYWORD2
+dprintMajorDivideLn     KEYWORD2
 
-printDouble 	KEYWORD2
+printDouble 	        KEYWORD2
