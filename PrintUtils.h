@@ -241,6 +241,18 @@ void dprintMinorDivide(uint8_t do_print) {
   }
 }
 
+void dprintDivideLn(uint8_t do_print, String text) {
+  if (do_print){
+    Serial.println("-------------------------------------\n");
+  }
+}
+
+void dprintDivide(uint8_t do_print, String text) {
+  if (do_print){
+    Serial.println("|||||||||||||||||||||||||||||||||||||");
+  }
+}
+
 void dprintMajorDivide(uint8_t do_print, String text) {
   if (do_print){
   Serial.println("|||||||||||||||||||||||||||||||||||||");

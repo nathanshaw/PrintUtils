@@ -17,6 +17,8 @@ dprintTeensyDivide      KEYWORD2
 dprintTeensyDivideLn    KEYWORD2
 dprintMinorDivide       KEYWORD2
 dprintMinorDivideLn     KEYWORD2
+dprintDivide            KEYWORD2
+dprintDivideLn          KEYWORD2
 dprintMajorDivide       KEYWORD2
 dprintMajorDivideLn     KEYWORD2
 
